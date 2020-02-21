@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C0ADDE223FEBA8C00928CC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0ADDE123FEBA8C00928CC5 /* AppDelegate.swift */; };
+		2C0ADDE723FEBA8C00928CC5 /* Take_That_Break.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C0ADDE523FEBA8C00928CC5 /* Take_That_Break.xcdatamodeld */; };
+		2C0ADDE923FEBA8D00928CC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0ADDE823FEBA8D00928CC5 /* Assets.xcassets */; };
+		2C0ADDEC23FEBA8D00928CC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0ADDEB23FEBA8D00928CC5 /* Preview Assets.xcassets */; };
+		2C0ADDEF23FEBA8D00928CC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0ADDED23FEBA8D00928CC5 /* Main.storyboard */; };
+		2C0ADDFB23FEBA8D00928CC5 /* Take_That_BreakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0ADDFA23FEBA8D00928CC5 /* Take_That_BreakTests.swift */; };
+		2C0ADE0623FEBA8E00928CC5 /* Take_That_BreakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0ADE0523FEBA8E00928CC5 /* Take_That_BreakUITests.swift */; };
+		2C0BF988240019B300A02D49 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BF987240019B300A02D49 /* PreferencesViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C0ADDF723FEBA8D00928CC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C0ADDD623FEBA8C00928CC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C0ADDDD23FEBA8C00928CC5;
+			remoteInfo = "Take That Break";
+		};
+		2C0ADE0223FEBA8E00928CC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C0ADDD623FEBA8C00928CC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C0ADDDD23FEBA8C00928CC5;
+			remoteInfo = "Take That Break";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C0ADDDE23FEBA8C00928CC5 /* Take That Break.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Take That Break.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C0ADDE123FEBA8C00928CC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C0ADDE623FEBA8C00928CC5 /* Take_That_Break.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Take_That_Break.xcdatamodel; sourceTree = "<group>"; };
+		2C0ADDE823FEBA8D00928CC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C0ADDEB23FEBA8D00928CC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2C0ADDEE23FEBA8D00928CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C0ADDF023FEBA8D00928CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C0ADDF123FEBA8D00928CC5 /* Take_That_Break.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Take_That_Break.entitlements; sourceTree = "<group>"; };
+		2C0ADDF623FEBA8D00928CC5 /* Take That BreakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Take That BreakTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C0ADDFA23FEBA8D00928CC5 /* Take_That_BreakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Take_That_BreakTests.swift; sourceTree = "<group>"; };
+		2C0ADDFC23FEBA8D00928CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C0ADE0123FEBA8E00928CC5 /* Take That BreakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Take That BreakUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C0ADE0523FEBA8E00928CC5 /* Take_That_BreakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Take_That_BreakUITests.swift; sourceTree = "<group>"; };
+		2C0ADE0723FEBA8E00928CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C0BF987240019B300A02D49 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		2C0BF98A24003A9400A02D49 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		2C0BF98B24003AFC00A02D49 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
+		2C0BF98C24003B0C00A02D49 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C0ADDDB23FEBA8C00928CC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C0ADDF323FEBA8D00928CC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C0ADDFE23FEBA8E00928CC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C0ADDD523FEBA8C00928CC5 = {
+			isa = PBXGroup;
+			children = (
+				2C0ADDE023FEBA8C00928CC5 /* Take That Break */,
+				2C0ADDF923FEBA8D00928CC5 /* Take That BreakTests */,
+				2C0ADE0423FEBA8E00928CC5 /* Take That BreakUITests */,
+				2C0ADDDF23FEBA8C00928CC5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C0ADDDF23FEBA8C00928CC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C0ADDDE23FEBA8C00928CC5 /* Take That Break.app */,
+				2C0ADDF623FEBA8D00928CC5 /* Take That BreakTests.xctest */,
+				2C0ADE0123FEBA8E00928CC5 /* Take That BreakUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C0ADDE023FEBA8C00928CC5 /* Take That Break */ = {
+			isa = PBXGroup;
+			children = (
+				2C0ADDE123FEBA8C00928CC5 /* AppDelegate.swift */,
+				2C0BF987240019B300A02D49 /* PreferencesViewController.swift */,
+				2C0ADDE823FEBA8D00928CC5 /* Assets.xcassets */,
+				2C0ADDED23FEBA8D00928CC5 /* Main.storyboard */,
+				2C0ADDF023FEBA8D00928CC5 /* Info.plist */,
+				2C0ADDF123FEBA8D00928CC5 /* Take_That_Break.entitlements */,
+				2C0ADDE523FEBA8C00928CC5 /* Take_That_Break.xcdatamodeld */,
+				2C0ADDEA23FEBA8D00928CC5 /* Preview Content */,
+				2C0BF98A24003A9400A02D49 /* Development.xcconfig */,
+				2C0BF98B24003AFC00A02D49 /* Staging.xcconfig */,
+				2C0BF98C24003B0C00A02D49 /* Production.xcconfig */,
+			);
+			path = "Take That Break";
+			sourceTree = "<group>";
+		};
+		2C0ADDEA23FEBA8D00928CC5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2C0ADDEB23FEBA8D00928CC5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2C0ADDF923FEBA8D00928CC5 /* Take That BreakTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C0ADDFA23FEBA8D00928CC5 /* Take_That_BreakTests.swift */,
+				2C0ADDFC23FEBA8D00928CC5 /* Info.plist */,
+			);
+			path = "Take That BreakTests";
+			sourceTree = "<group>";
+		};
+		2C0ADE0423FEBA8E00928CC5 /* Take That BreakUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2C0ADE0523FEBA8E00928CC5 /* Take_That_BreakUITests.swift */,
+				2C0ADE0723FEBA8E00928CC5 /* Info.plist */,
+			);
+			path = "Take That BreakUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C0ADDDD23FEBA8C00928CC5 /* Take That Break */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C0ADE0A23FEBA8E00928CC5 /* Build configuration list for PBXNativeTarget "Take That Break" */;
+			buildPhases = (
+				2C0ADDDA23FEBA8C00928CC5 /* Sources */,
+				2C0ADDDB23FEBA8C00928CC5 /* Frameworks */,
+				2C0ADDDC23FEBA8C00928CC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Take That Break";
+			productName = "Take That Break";
+			productReference = 2C0ADDDE23FEBA8C00928CC5 /* Take That Break.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C0ADDF523FEBA8D00928CC5 /* Take That BreakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C0ADE0D23FEBA8E00928CC5 /* Build configuration list for PBXNativeTarget "Take That BreakTests" */;
+			buildPhases = (
+				2C0ADDF223FEBA8D00928CC5 /* Sources */,
+				2C0ADDF323FEBA8D00928CC5 /* Frameworks */,
+				2C0ADDF423FEBA8D00928CC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C0ADDF823FEBA8D00928CC5 /* PBXTargetDependency */,
+			);
+			name = "Take That BreakTests";
+			productName = "Take That BreakTests";
+			productReference = 2C0ADDF623FEBA8D00928CC5 /* Take That BreakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2C0ADE0023FEBA8E00928CC5 /* Take That BreakUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C0ADE1023FEBA8E00928CC5 /* Build configuration list for PBXNativeTarget "Take That BreakUITests" */;
+			buildPhases = (
+				2C0ADDFD23FEBA8E00928CC5 /* Sources */,
+				2C0ADDFE23FEBA8E00928CC5 /* Frameworks */,
+				2C0ADDFF23FEBA8E00928CC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C0ADE0323FEBA8E00928CC5 /* PBXTargetDependency */,
+			);
+			name = "Take That BreakUITests";
+			productName = "Take That BreakUITests";
+			productReference = 2C0ADE0123FEBA8E00928CC5 /* Take That BreakUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C0ADDD623FEBA8C00928CC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Dragos Strugar";
+				TargetAttributes = {
+					2C0ADDDD23FEBA8C00928CC5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					2C0ADDF523FEBA8D00928CC5 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 2C0ADDDD23FEBA8C00928CC5;
+					};
+					2C0ADE0023FEBA8E00928CC5 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 2C0ADDDD23FEBA8C00928CC5;
+					};
+				};
+			};
+			buildConfigurationList = 2C0ADDD923FEBA8C00928CC5 /* Build configuration list for PBXProject "Take That Break" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C0ADDD523FEBA8C00928CC5;
+			productRefGroup = 2C0ADDDF23FEBA8C00928CC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C0ADDDD23FEBA8C00928CC5 /* Take That Break */,
+				2C0ADDF523FEBA8D00928CC5 /* Take That BreakTests */,
+				2C0ADE0023FEBA8E00928CC5 /* Take That BreakUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C0ADDDC23FEBA8C00928CC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C0ADDEF23FEBA8D00928CC5 /* Main.storyboard in Resources */,
+				2C0ADDEC23FEBA8D00928CC5 /* Preview Assets.xcassets in Resources */,
+				2C0ADDE923FEBA8D00928CC5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C0ADDF423FEBA8D00928CC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C0ADDFF23FEBA8E00928CC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C0ADDDA23FEBA8C00928CC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C0ADDE723FEBA8C00928CC5 /* Take_That_Break.xcdatamodeld in Sources */,
+				2C0ADDE223FEBA8C00928CC5 /* AppDelegate.swift in Sources */,
+				2C0BF988240019B300A02D49 /* PreferencesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C0ADDF223FEBA8D00928CC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C0ADDFB23FEBA8D00928CC5 /* Take_That_BreakTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C0ADDFD23FEBA8E00928CC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C0ADE0623FEBA8E00928CC5 /* Take_That_BreakUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C0ADDF823FEBA8D00928CC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C0ADDDD23FEBA8C00928CC5 /* Take That Break */;
+			targetProxy = 2C0ADDF723FEBA8D00928CC5 /* PBXContainerItemProxy */;
+		};
+		2C0ADE0323FEBA8E00928CC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C0ADDDD23FEBA8C00928CC5 /* Take That Break */;
+			targetProxy = 2C0ADE0223FEBA8E00928CC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C0ADDED23FEBA8D00928CC5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C0ADDEE23FEBA8D00928CC5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C0ADE0823FEBA8E00928CC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C0BF98A24003A9400A02D49 /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2C0ADE0923FEBA8E00928CC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C0BF98C24003B0C00A02D49 /* Production.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		2C0ADE0B23FEBA8E00928CC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C0BF98A24003A9400A02D49 /* Development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Take That Break/Take_That_Break.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Take That Break/Preview Content\"";
+				DEVELOPMENT_TEAM = AR494XTABA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Take That Break/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.strugardragos.Take-That-Break";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2C0ADE0C23FEBA8E00928CC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C0BF98C24003B0C00A02D49 /* Production.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Take That Break/Take_That_Break.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Take That Break/Preview Content\"";
+				DEVELOPMENT_TEAM = AR494XTABA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Take That Break/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.strugardragos.Take-That-Break";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2C0ADE0E23FEBA8E00928CC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C0BF98A24003A9400A02D49 /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AR494XTABA;
+				INFOPLIST_FILE = "Take That BreakTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.strugardragos.Take-That-BreakTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Take That Break.app/Contents/MacOS/Take That Break";
+			};
+			name = Debug;
+		};
+		2C0ADE0F23FEBA8E00928CC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C0BF98C24003B0C00A02D49 /* Production.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AR494XTABA;
+				INFOPLIST_FILE = "Take That BreakTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.strugardragos.Take-That-BreakTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Take That Break.app/Contents/MacOS/Take That Break";
+			};
+			name = Release;
+		};
+		2C0ADE1123FEBA8E00928CC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C0BF98A24003A9400A02D49 /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AR494XTABA;
+				INFOPLIST_FILE = "Take That BreakUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.strugardragos.Take-That-BreakUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Take That Break";
+			};
+			name = Debug;
+		};
+		2C0ADE1223FEBA8E00928CC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C0BF98C24003B0C00A02D49 /* Production.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AR494XTABA;
+				INFOPLIST_FILE = "Take That BreakUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.strugardragos.Take-That-BreakUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Take That Break";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C0ADDD923FEBA8C00928CC5 /* Build configuration list for PBXProject "Take That Break" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C0ADE0823FEBA8E00928CC5 /* Debug */,
+				2C0ADE0923FEBA8E00928CC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C0ADE0A23FEBA8E00928CC5 /* Build configuration list for PBXNativeTarget "Take That Break" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C0ADE0B23FEBA8E00928CC5 /* Debug */,
+				2C0ADE0C23FEBA8E00928CC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C0ADE0D23FEBA8E00928CC5 /* Build configuration list for PBXNativeTarget "Take That BreakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C0ADE0E23FEBA8E00928CC5 /* Debug */,
+				2C0ADE0F23FEBA8E00928CC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C0ADE1023FEBA8E00928CC5 /* Build configuration list for PBXNativeTarget "Take That BreakUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C0ADE1123FEBA8E00928CC5 /* Debug */,
+				2C0ADE1223FEBA8E00928CC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2C0ADDE523FEBA8C00928CC5 /* Take_That_Break.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2C0ADDE623FEBA8C00928CC5 /* Take_That_Break.xcdatamodel */,
+			);
+			currentVersion = 2C0ADDE623FEBA8C00928CC5 /* Take_That_Break.xcdatamodel */;
+			path = Take_That_Break.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2C0ADDD623FEBA8C00928CC5 /* Project object */;
+}
