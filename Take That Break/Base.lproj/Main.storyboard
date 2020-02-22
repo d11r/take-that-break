@@ -711,8 +711,8 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="K5h-6d-o1W">
-                                <rect key="frame" x="18" y="320" width="184" height="18"/>
-                                <buttonCell key="cell" type="check" title="Start this app on mac start" bezelStyle="regularSquare" imagePosition="left" inset="2" id="lQK-Rt-8MQ">
+                                <rect key="frame" x="18" y="320" width="322" height="18"/>
+                                <buttonCell key="cell" type="check" title="Start this app on mac start (not yet implemented)" bezelStyle="regularSquare" imagePosition="left" inset="2" id="lQK-Rt-8MQ">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
