@@ -676,6 +676,7 @@
                 </application>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Take_That_Break" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <customObject id="ESC-dX-TIx" customClass="SUUpdater"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="81" y="152"/>
@@ -713,7 +714,7 @@
                                 <rect key="frame" x="18" y="320" width="184" height="18"/>
                                 <buttonCell key="cell" type="check" title="Start this app on mac start" bezelStyle="regularSquare" imagePosition="left" inset="2" id="lQK-Rt-8MQ">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="label" size="13"/>
+                                    <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
                             <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="w4K-9e-qmz">
@@ -722,7 +723,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UX4-jw-FCl">
                                 <rect key="frame" x="18" y="265" width="157" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Working session duration" id="Ojf-ZD-E05">
-                                    <font key="font" metaFont="label" size="13"/>
+                                    <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -735,7 +736,7 @@
                                 <rect key="frame" x="141" y="192" width="125" height="32"/>
                                 <buttonCell key="cell" type="push" title="Save changes" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3Oe-XK-fcI">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="label" size="13"/>
+                                    <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="saveSettingsChanges:" target="mrx-P6-D8O" id="0OB-Dt-omn"/>
@@ -747,7 +748,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vzI-zV-PXJ">
                                 <rect key="frame" x="18" y="142" width="299" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Got some feedback? We'd love to hear from you!" id="48o-9v-Wla">
-                                    <font key="font" metaFont="label" size="13"/>
+                                    <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -758,7 +759,7 @@
                                     <constraint firstAttribute="height" constant="61" id="WgK-b1-xhL"/>
                                 </constraints>
                                 <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Any improvement suggestions, or any kind of feedback really. Thanks! This is some random text just to fill in the third line." drawsBackground="YES" allowsEditingTextAttributes="YES" id="CIV-7v-iCK">
-                                    <font key="font" metaFont="label" size="13"/>
+                                    <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -767,7 +768,7 @@
                                 <rect key="frame" x="132" y="23" width="143" height="32"/>
                                 <buttonCell key="cell" type="push" title="Submit feedback" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NiZ-7b-Qe5">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="label" size="13"/>
+                                    <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="submitFeedback:" target="mrx-P6-D8O" id="K9d-3u-NjN"/>
@@ -776,7 +777,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P0F-0b-G2b">
                                 <rect key="frame" x="187" y="236" width="200" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="5min          20min               40min" id="ay9-8W-LQh">
-                                    <font key="font" metaFont="label" size="13"/>
+                                    <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>

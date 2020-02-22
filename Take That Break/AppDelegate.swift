@@ -8,6 +8,7 @@
 
 import Cocoa
 import SwiftUI
+import Sparkle
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -66,7 +67,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(NSMenuItem.separator())
         
         menu.addItem(withTitle: "Preferences", action: #selector(AppDelegate.openPreferences), keyEquivalent: ",")
-        menu.addItem(withTitle: "Check for updates", action: #selector(AppDelegate.checkUpdates), keyEquivalent: "")
+        menu.addItem(withTitle: "Check for updates", action: #selector(checkForUpdates), keyEquivalent: "")
         menu.addItem(withTitle: "Share the app!", action: #selector(AppDelegate.share), keyEquivalent: "")
         
         menu.addItem(NSMenuItem.separator())
@@ -80,6 +81,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.timeRemaining = defaults.integer(forKey: "timeSessionDuration")
         }
         stateReducer()
+    }
+    
+    @IBAction func checkForUpdates(_ sender: Any) {
+        let updater = SUUpdater.shared()
+        updater?.feedURL = URL(string: "")
+        updater?.checkForUpdates(self)
     }
     
     @objc func stopCountdown() {
@@ -103,11 +110,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         preferencesController!.showWindow(self)
         NSApp.activate(ignoringOtherApps: true)
-    }
-    
-    // TODO: implement auto update functionality
-    @objc func checkUpdates() {
-        print("Check for updates clicked!")
     }
     
     // TODO: implement sharing functionality
