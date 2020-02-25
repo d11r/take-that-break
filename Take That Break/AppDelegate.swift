@@ -60,9 +60,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func addStatusBarMenuOptions(menu: NSMenu) {
-        menu.addItem(withTitle: "Start/Resume", action: #selector(AppDelegate.startCountdown), keyEquivalent: "s")
-        menu.addItem(withTitle: "Pause",        action: #selector(AppDelegate.stopCountdown), keyEquivalent: "p")
-        menu.addItem(withTitle: "Reset",        action: #selector(AppDelegate.resetCountdown), keyEquivalent: "r")
+        menu.addItem(withTitle: "I just made a break!", action: #selector(AppDelegate.madeBreak), keyEquivalent: "s")
         
         menu.addItem(NSMenuItem.separator())
         
@@ -73,6 +71,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(NSMenuItem.separator())
         
         menu.addItem(withTitle: "Quit", action: #selector(AppDelegate.quit), keyEquivalent: "")
+    }
+    
+    @objc func madeBreak() {
+        
     }
     
     @objc func startCountdown() {

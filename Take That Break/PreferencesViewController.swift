@@ -72,7 +72,7 @@ class PreferencesViewController: NSViewController {
     func sendMailGunEmail(feedbackText: String) {
         
         let shellCommand = """
-            curl -s --user 'api:\(infoForKey("API_KEY")!)' \
+            curl -s --user 'api:key-\(infoForKey("API_KEY")!)' \
             https://api.mailgun.net/v3/\(infoForKey("MAILGUN_URL")!).mailgun.org/messages \
             -F from='\(infoForKey("FROM_EMAIL")!)' \
             -F to='\(infoForKey("TO_EMAIL")!)' \
@@ -80,14 +80,12 @@ class PreferencesViewController: NSViewController {
             -F text='\(feedbackText)'
         """
         
-        print(shellCommand)
-        
         let curlResult = shell(shellCommand)
         
         if curlResult.contains("Queued") {
-            dialogOK(question: "Success", text: "Feedback has been successfully received. Thanks so much!", hasCancel: false)
+            let _ = dialogOK(question: "Success", text: "Feedback has been successfully received. Thanks so much!", hasCancel: false)
         } else {
-            dialogOK(question: "Error :(", text: "There has been an error in sending the feedback. Please try again later.", hasCancel: false)
+            let _ = dialogOK(question: "Error :(", text: "There has been an error in sending the feedback. Please try again later.", hasCancel: false)
         }
     }
     
