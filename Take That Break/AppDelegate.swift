@@ -20,6 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // State Variables
     private var timeRemaining: Int = 20
+    private var isFocused: Bool = false
     
     private var windowViewController: NSWindowController?
     private var timer: Timer?
@@ -66,6 +67,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         menu.addItem(NSMenuItem.separator())
         
+        menu.addItem(withTitle: "Focus! (turn off notifications)", action: #selector(AppDelegate.focus), keyEquivalent: "f")
+        
+        menu.addItem(NSMenuItem.separator())
+        
         menu.addItem(withTitle: "Preferences", action: #selector(AppDelegate.openPreferences), keyEquivalent: ",")
         menu.addItem(withTitle: "Check for updates", action: #selector(checkForUpdates), keyEquivalent: "")
         menu.addItem(withTitle: "Share the app!", action: #selector(AppDelegate.share), keyEquivalent: "")
@@ -76,7 +81,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func startCountdown() {
-        self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(decreaseMinutes), userInfo: nil, repeats: true)
+        isFocused = false
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(decreaseMinutes), userInfo: nil, repeats: true)
         statusBarItem.button?.image = NSImage(named: "running")
         if (self.timeRemaining == 0) {
             self.timeRemaining = defaults.integer(forKey: "timeSessionDuration")
@@ -96,7 +102,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         stateReducer()
     }
     
+    @objc func focus() {
+        isFocused = true
+        timer?.invalidate()
+        timer = nil
+        stateReducer()
+        statusBarItem.button?.image = NSImage(named: "focus")
+    }
+    
     @objc func resetCountdown() {
+        isFocused = false
         timer?.invalidate()
         timer = nil
         self.timeRemaining = defaults.integer(forKey: "timeSessionDuration")
@@ -130,9 +145,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     public func stateReducer() {
         if ((self.timer) != nil) {
             if (self.timeRemaining == 0) {
-                // TODO: display some warning/notification
+                if (!isFocused) {
+                    showNotification()
+                }
+                
                 statusBarItem.button?.image = NSImage(named: "time-out")
-                print("Should display some notification")
                 stopCountdown()
             } else {
                 statusBarItem.button?.title = "\(self.timeRemaining) min"
@@ -247,6 +264,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         // If we got here, it is time to quit.
         return .terminateNow
+    }
+    
+    func showNotification() -> Void {
+        let notification = NSUserNotification()
+        // notification.identifier = "abcdef"
+        notification.title = "Take That Break!"
+        notification.subtitle = "Take care of your health."
+        notification.informativeText = "This is some more text"
+        notification.soundName = NSUserNotificationDefaultSoundName
+        // notification.contentImage = NSImage(contentsOf: NSURL(string: "https://placehold.it/300")! as URL)
+        
+        let notificationCenter = NSUserNotificationCenter.default
+        notificationCenter.deliver(notification)
+    }
+
+    func userNotificationCenter(_ center: NSUserNotificationCenter,
+                                    shouldPresent notification: NSUserNotification) -> Bool {
+            return true
     }
 }
 
