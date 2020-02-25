@@ -34,8 +34,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusBarItem = statusBar.statusItem(withLength: NSStatusItem.variableLength)
         
         // Set Status Bar Content
-        statusBarItem.button?.image = #imageLiteral(resourceName: "StatusBarImg")
-        statusBarItem.button?.imagePosition = NSControl.ImagePosition.imageRight
+        statusBarItem.button?.image = NSImage(named: "running")
+        statusBarItem.button?.imagePosition = NSControl.ImagePosition.imageLeft
         
         // Create Menu on Click
         statusBarMenu = NSMenu(title: "Take That Break! Menu")
@@ -76,7 +76,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func startCountdown() {
-        self.timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(decreaseMinutes), userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(decreaseMinutes), userInfo: nil, repeats: true)
+        statusBarItem.button?.image = NSImage(named: "running")
         if (self.timeRemaining == 0) {
             self.timeRemaining = defaults.integer(forKey: "timeSessionDuration")
         }
@@ -130,6 +131,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if ((self.timer) != nil) {
             if (self.timeRemaining == 0) {
                 // TODO: display some warning/notification
+                statusBarItem.button?.image = NSImage(named: "time-out")
                 print("Should display some notification")
                 stopCountdown()
             } else {
@@ -137,8 +139,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         } else {
             if (self.timeRemaining == 0) {
-                statusBarItem.button?.title = "Rest now"
+                statusBarItem.button?.image = NSImage(named: "time-out")
+                statusBarItem.button?.title = "Take That Break!"
             } else {
+                statusBarItem.button?.image = NSImage(named: "no-time")
                 statusBarItem.button?.title = ""
             }
         }
