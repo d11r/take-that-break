@@ -27,6 +27,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private let defaults = UserDefaults.standard
     private var preferencesController: NSWindowController?
+    private var timeForBreakController: NSWindowController?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         self.loadInitialDefaultValues()
@@ -67,7 +68,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         menu.addItem(NSMenuItem.separator())
         
-        menu.addItem(withTitle: "Focus! (turn off notifications)", action: #selector(AppDelegate.focus), keyEquivalent: "f")
+        menu.addItem(withTitle: "In the Flow! (turn off notifications)", action: #selector(AppDelegate.focus), keyEquivalent: "f")
         
         menu.addItem(NSMenuItem.separator())
         
@@ -118,6 +119,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         stateReducer()
     }
     
+    @objc func openTimeForBreak() {
+        let mainStoryboard = NSStoryboard.init(name: NSStoryboard.Name("Main"), bundle: nil)
+        
+        if timeForBreakController == nil {
+            timeForBreakController = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("TimeForBreakViewController")) as? NSWindowController
+        }
+        timeForBreakController!.showWindow(self)
+        NSApp.activate(ignoringOtherApps: true)
+    }
+    
     @objc func openPreferences() {
         let mainStoryboard = NSStoryboard.init(name: NSStoryboard.Name("Main"), bundle: nil)
         
@@ -146,7 +157,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if ((self.timer) != nil) {
             if (self.timeRemaining == 0) {
                 if (!isFocused) {
-                    showNotification()
+                    openTimeForBreak()
                 }
                 
                 statusBarItem.button?.image = NSImage(named: "time-out")
@@ -264,24 +275,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         // If we got here, it is time to quit.
         return .terminateNow
-    }
-    
-    func showNotification() -> Void {
-        let notification = NSUserNotification()
-        // notification.identifier = "abcdef"
-        notification.title = "Take That Break!"
-        notification.subtitle = "Take care of your health."
-        notification.informativeText = "This is some more text"
-        notification.soundName = NSUserNotificationDefaultSoundName
-        // notification.contentImage = NSImage(contentsOf: NSURL(string: "https://placehold.it/300")! as URL)
-        
-        let notificationCenter = NSUserNotificationCenter.default
-        notificationCenter.deliver(notification)
-    }
-
-    func userNotificationCenter(_ center: NSUserNotificationCenter,
-                                    shouldPresent notification: NSUserNotification) -> Bool {
-            return true
     }
 }
 

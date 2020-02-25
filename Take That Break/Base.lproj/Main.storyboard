@@ -820,5 +820,102 @@
             </objects>
             <point key="canvasLocation" x="44" y="-164"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="Ltk-Qp-rq1">
+            <objects>
+                <windowController storyboardIdentifier="TimeForBreakViewController" id="suc-8N-yt7" sceneMemberID="viewController">
+                    <window key="window" title="It's time to take a break" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="qyB-n5-bAb">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="313" width="335" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <connections>
+                            <outlet property="delegate" destination="suc-8N-yt7" id="ef9-QL-ynd"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="vrG-b9-wii" kind="relationship" relationship="window.shadowedContentViewController" id="bc7-a5-1ej"/>
+                    </connections>
+                </windowController>
+                <customObject id="p9B-Bn-RcU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-624.5" y="152"/>
+        </scene>
+        <!--Time For Break View Controller-->
+        <scene sceneID="alI-og-rjB">
+            <objects>
+                <viewController id="vrG-b9-wii" customClass="TimeForBreakViewController" customModule="Take_That_Break" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" misplaced="YES" id="W4h-HT-9F2">
+                        <rect key="frame" x="0.0" y="0.0" width="380" height="280"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6UI-lb-o3w">
+                                <rect key="frame" x="38" y="56" width="304" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="T5o-xG-2yj"/>
+                                </constraints>
+                                <textFieldCell key="cell" alignment="center" title="Label" id="DkC-Vk-wGJ">
+                                    <font key="font" size="13" name="HelveticaNeue"/>
+                                    <color key="textColor" name="windowFrameTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="09g-QI-SjR">
+                                <rect key="frame" x="78" y="215" width="224" height="32"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Take That Break!" id="8HV-vu-REQ">
+                                    <font key="font" size="23" name="Arial-Black"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qVh-g8-1eB">
+                                <rect key="frame" x="28" y="162" width="324" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="dg0-Kv-t7J"/>
+                                    <constraint firstAttribute="width" constant="320" id="kr8-ma-cXv"/>
+                                </constraints>
+                                <textFieldCell key="cell" alignment="center" title="Time for the break. Here's something that might encourage you to stand up." id="hcG-pS-0wy">
+                                    <font key="font" metaFont="systemLight" size="13"/>
+                                    <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U35-wQ-K1R">
+                                <rect key="frame" x="134" y="13" width="112" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="2yP-kt-flV"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="OK!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dt5-Cc-8Mn">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onOK:" target="vrG-b9-wii" id="Yq6-UU-qep"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="6UI-lb-o3w" firstAttribute="top" secondItem="qVh-g8-1eB" secondAttribute="bottom" constant="8" id="0io-ji-pHH"/>
+                            <constraint firstItem="09g-QI-SjR" firstAttribute="centerX" secondItem="W4h-HT-9F2" secondAttribute="centerX" id="1Va-Xt-Mgh"/>
+                            <constraint firstItem="qVh-g8-1eB" firstAttribute="centerX" secondItem="W4h-HT-9F2" secondAttribute="centerX" id="2f8-9q-pgU"/>
+                            <constraint firstItem="U35-wQ-K1R" firstAttribute="top" secondItem="6UI-lb-o3w" secondAttribute="bottom" constant="15" id="58V-o4-Nai"/>
+                            <constraint firstItem="09g-QI-SjR" firstAttribute="top" secondItem="W4h-HT-9F2" secondAttribute="top" constant="30" id="6AJ-Af-5ca"/>
+                            <constraint firstItem="qVh-g8-1eB" firstAttribute="width" secondItem="W4h-HT-9F2" secondAttribute="width" multiplier="0.842105" id="6av-ba-swn"/>
+                            <constraint firstItem="6UI-lb-o3w" firstAttribute="leading" secondItem="W4h-HT-9F2" secondAttribute="leading" constant="40" id="8YU-YD-JQR"/>
+                            <constraint firstItem="qVh-g8-1eB" firstAttribute="top" secondItem="09g-QI-SjR" secondAttribute="bottom" constant="8" id="QXS-f2-6QH"/>
+                            <constraint firstAttribute="trailing" secondItem="6UI-lb-o3w" secondAttribute="trailing" constant="40" id="cs5-DB-6SA"/>
+                            <constraint firstAttribute="bottom" secondItem="U35-wQ-K1R" secondAttribute="bottom" constant="20" id="fz3-li-Fuu"/>
+                            <constraint firstItem="U35-wQ-K1R" firstAttribute="centerX" secondItem="W4h-HT-9F2" secondAttribute="centerX" id="rBh-6q-ZL6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="FactLabel" destination="6UI-lb-o3w" id="EkK-K9-5nx"/>
+                        <outlet property="TitleLabel" destination="qVh-g8-1eB" id="Btk-MP-yeW"/>
+                    </connections>
+                </viewController>
+                <customObject id="3HL-XP-hgg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-602" y="663"/>
+        </scene>
     </scenes>
 </document>
