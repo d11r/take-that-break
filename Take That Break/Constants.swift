@@ -39,6 +39,9 @@ class Constants {
         "Working for long stretches without breaks leads to stress and exhaustion. Taking breaks refreshes the mind, replenishes your mental resources, and helps you become more creative.",
         "“Aha moments” came more often to those who took breaks, according to research.",
         "There are times when it makes no sense to take a break. One of those times is when you are in a state of “flow.”"
-        
     ]
+    
+    public static func getRandomElement(array: [String]) -> String {
+        return array.randomElement()!
+    }
 }

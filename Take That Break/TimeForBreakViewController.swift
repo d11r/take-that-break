@@ -18,9 +18,8 @@ class TimeForBreakViewController: NSViewController {
         self.view.window?.close()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        FactLabel.stringValue = Constants.userMessages.randomElement()!
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        FactLabel.stringValue = Constants.getRandomElement(array: Constants.userMessages)
     }
 }

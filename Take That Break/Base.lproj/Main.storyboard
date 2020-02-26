@@ -885,9 +885,12 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="2yP-kt-flV"/>
                                 </constraints>
-                                <buttonCell key="cell" type="push" title="OK!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dt5-Cc-8Mn">
+                                <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dt5-Cc-8Mn">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="onOK:" target="vrG-b9-wii" id="Yq6-UU-qep"/>

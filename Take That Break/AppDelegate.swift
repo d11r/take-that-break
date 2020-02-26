@@ -83,7 +83,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func startCountdown() {
         isFocused = false
-        self.timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(decreaseMinutes), userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(decreaseMinutes), userInfo: nil, repeats: true)
         statusBarItem.button?.image = NSImage(named: "running")
         if (self.timeRemaining == 0) {
             self.timeRemaining = defaults.integer(forKey: "timeSessionDuration")
